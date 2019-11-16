@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bouncer</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="column-container">
         <div class="top-menu">
             <div class="container">
                 <div class="left-controls">
@@ -33,8 +33,42 @@
                 </div>
             </div>
         </div>
-        <div class="logo-and-nav-container"></div>
+        <div class="logo-and-nav-container column-container">
+            <img src="./img/logo.svg" alt="">
+            <nav class="flex-container">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Store</a>
+                <a href="#" class="nav-link">iPhone</a>
+                <a href="#" class="nav-link">iPad</a>
+                <a href="#" class="nav-link">MacBook</a>
+                <a href="#" class="nav-link">Accessories</a>
+            </nav>
+        </div>
     </header>
+    <section class="carousel-section">
+        <div class="container flex-container">
+            <div class="slide-description">
+                <div class="slide-title"></div>
+                <div class="slide-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi fuga eos
+                    iusto ab blanditiis hic nobis eveniet porro inventore? Dicta cumque temporibus, fugiat optio rerum
+                    ullam nostrum harum provident!</div>
+                <a href="#" class="slide-link">MORE</a>
+            </div>
+            <img src="./img/Mask_Group_1.svg" alt="">
+        </div>
+    </section>
+    <section class="top-gadgets-section">
+        <div class="container flex-container">
+            <a class="gadget-card">
+                <div class="card-title"></div>
+                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi fuga eos
+                    iusto ab blanditiis hic nobis eveniet porro inventore? Dicta cumque temporibus, fugiat optio rerum
+                    ullam nostrum harum provident!</div>
+            </a>
+            <a class="gadget-card"></a>
+            <a class="gadget-card"></a>
+        </div>
+    </section>
 </body>
 
 </html>
