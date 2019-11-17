@@ -49,6 +49,11 @@ body {
     color: $primary-color;
 }
 
+a {
+	text-decoration: none;
+	color: $primary-color;
+}
+
 .font-bold {
     font-weight: bold;
 }
@@ -69,4 +74,9 @@ body {
 .flex-vertical-center {
     @extend .flex-container;
     align-items: center;
+}
+
+.grid-container {
+	display: grid;
+	justify-content: center;
 }

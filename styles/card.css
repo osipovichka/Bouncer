@@ -38,6 +38,11 @@ body {
   color: #26262A;
 }
 
+a {
+  text-decoration: none;
+  color: #26262A;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -63,5 +68,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=card.css.map */

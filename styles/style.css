@@ -38,11 +38,16 @@ body {
   color: #26262A;
 }
 
+a {
+  text-decoration: none;
+  color: #26262A;
+}
+
 .font-bold, .carousel-section .slide-title, .gadget-card .card-title {
   font-weight: bold;
 }
 
-.font-semibold, .nav-link {
+.font-semibold, .nav-link, .bestseller-heading, .card-bestseller a {
   font-weight: 600;
 }
 
@@ -63,6 +68,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header {
@@ -262,11 +275,92 @@ nav {
   font-size: 24px;
 }
 
-.center-card {
+.gadget-card .center-card {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: -45px;
   margin-right: 30px;
+}
+
+.bestseller-heading {
+  font-size: 30px;
+}
+
+.menu {
+  width: 478px;
+  margin-bottom: 26px;
+}
+
+.menu .nav-menu {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #26262A;
+}
+
+.menu .nav-menu.active, .menu .nav-menu:hover {
+  color: #33A0FF;
+  border-bottom: 2px solid #33A0FF;
+}
+
+.bestseller {
+  width: 1170px;
+  height: 730px;
+  -ms-grid-columns: (270px)[4];
+      grid-template-columns: repeat(4, 270px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.card-bestseller {
+  width: 270px;
+  height: 350px;
+  border: 2px solid #F6F7F8;
+  padding: 30px 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.card-bestseller .macbook {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #F6F7F8;
+  margin-bottom: 15px;
+}
+
+.card-bestseller a {
+  font-size: 14px;
+}
+
+.card-bestseller .star {
+  margin-top: 29px;
+  margin-bottom: 15px;
+}
+
+.card-bestseller .star img {
+  margin-right: 5px;
+}
+
+.star,
+.price-bestseller {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-bestseller {
+  color: #FF4858;
+  font-size: 16px;
+}
+
+.price-bestseller .pr:last-child {
+  color: #C1C8CE;
+  margin-left: 15px;
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=style.css.map */
