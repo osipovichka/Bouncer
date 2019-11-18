@@ -258,7 +258,7 @@ nav {
 }
 
 .gadget-card .card-title {
-  font-size: 24;
+  font-size: 24px;
 }
 
 .gadget-card .card-text {
@@ -299,14 +299,16 @@ nav {
   color: #26262A;
 }
 
-.menu .nav-menu.active, .menu .nav-menu:hover {
+.menu .nav-menu.active {
   color: #33A0FF;
   border-bottom: 2px solid #33A0FF;
 }
 
+.menu .nav-menu:hover {
+  color: #33A0FF;
+}
+
 .bestseller {
-  width: 1170px;
-  height: 730px;
   -ms-grid-columns: (270px)[4];
       grid-template-columns: repeat(4, 270px);
   -webkit-box-pack: justify;
@@ -325,12 +327,35 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .card-bestseller .macbook {
   padding-bottom: 30px;
   border-bottom: 2px solid #F6F7F8;
   margin-bottom: 15px;
+}
+
+.card-bestseller button {
+  border: none;
+  background: white;
+  opacity: .95;
+}
+
+.card-bestseller .button {
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 170px;
+  background: white;
+  opacity: .95;
+  padding: 50px;
+  top: 25px;
+  left: 10px;
+}
+
+.card-bestseller .product-image:hover + .button {
+  display: inline-block;
 }
 
 .card-bestseller a {
@@ -362,5 +387,15 @@ nav {
   color: #C1C8CE;
   margin-left: 15px;
   text-decoration: line-through;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 88px;
+}
+
+.load-more a:hover {
+  color: #33A0FF;
+  border-bottom: 2px solid #33A0FF;
 }
 /*# sourceMappingURL=style.css.map */
