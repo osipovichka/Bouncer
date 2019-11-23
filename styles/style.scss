@@ -266,18 +266,18 @@ nav {
     
     .product-image { 
         position: relative;
-        z-index: 100;
-        width:236px;
+        z-index: 30;
+        width: 236px;
         height: 153px;
         margin-bottom: -170px;
     }
     
-    .product-image:hover {
+    &:hover .product-image {
         z-index: 10;
     }
     
-    .button:hover {
-        z-index: 100;
+    .button {
+        z-index: 20;
     }
     
     button {
@@ -297,7 +297,21 @@ nav {
         margin-bottom: 15px;
     }
 
-
+    .sticker {
+        @extend .font-semibold;
+        width: 40px;
+        height: 20px;
+        background: #FF4858;
+        font-size: 12px;
+        color: white;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 20;
+    }
 }
 
 .star,
@@ -509,7 +523,7 @@ form {
 
 }
 
-.loso-footer {
+.logo-footer {
         grid-template-columns: repeat(3, 350px);
         justify-content: space-evenly;
         border-bottom: 2px solid #F6F7F8;
@@ -531,6 +545,10 @@ form {
 
     img {
         margin-right: 39px;
+    }
+
+    .logo .text {
+        margin-top: 17px;
     }
 }
 
@@ -566,6 +584,10 @@ form {
 
     a {
         margin-right: 20px;
+    }
+
+    a:last-child {
+        margin-right: 0;
     }
 }
 

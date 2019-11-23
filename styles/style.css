@@ -47,7 +47,7 @@ a {
   font-weight: bold;
 }
 
-.font-semibold, .nav-link, .bestseller-heading, .card-bestseller .title, .news-section .new-title, .news-section .date, .featured-products-section .featured-products-titel, .featured-products-section .title, .loso-footer .title, .menu-footer .title {
+.font-semibold, .nav-link, .bestseller-heading, .card-bestseller .title, .card-bestseller .sticker, .news-section .new-title, .news-section .date, .featured-products-section .featured-products-titel, .featured-products-section .title, .logo-footer .title, .menu-footer .title {
   font-weight: 600;
 }
 
@@ -359,18 +359,18 @@ nav {
 
 .card-bestseller .product-image {
   position: relative;
-  z-index: 100;
+  z-index: 30;
   width: 236px;
   height: 153px;
   margin-bottom: -170px;
 }
 
-.card-bestseller .product-image:hover {
+.card-bestseller:hover .product-image {
   z-index: 10;
 }
 
-.card-bestseller .button:hover {
-  z-index: 100;
+.card-bestseller .button {
+  z-index: 20;
 }
 
 .card-bestseller button {
@@ -387,6 +387,25 @@ nav {
 .card-bestseller .star {
   margin-top: 29px;
   margin-bottom: 15px;
+}
+
+.card-bestseller .sticker {
+  width: 40px;
+  height: 20px;
+  background: #FF4858;
+  font-size: 12px;
+  color: white;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
 }
 
 .star,
@@ -609,7 +628,7 @@ form button {
   border-bottom: 2px solid #F6F7F8;
 }
 
-.loso-footer {
+.logo-footer {
   -ms-grid-columns: (350px)[3];
       grid-template-columns: repeat(3, 350px);
   -webkit-box-pack: space-evenly;
@@ -618,22 +637,26 @@ form button {
   border-bottom: 2px solid #F6F7F8;
 }
 
-.loso-footer .title {
+.logo-footer .title {
   font-size: 18px;
 }
 
-.loso-footer .text {
+.logo-footer .text {
   font-size: 12px;
   line-height: 20px;
   margin: 24px 0;
 }
 
-.loso-footer .text p {
+.logo-footer .text p {
   margin: 0;
 }
 
-.loso-footer img {
+.logo-footer img {
   margin-right: 39px;
+}
+
+.logo-footer .logo .text {
+  margin-top: 17px;
 }
 
 .menu-footer {
@@ -675,5 +698,9 @@ form button {
 
 .bottom a {
   margin-right: 20px;
+}
+
+.bottom a:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
