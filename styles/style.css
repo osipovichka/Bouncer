@@ -101,6 +101,11 @@ header {
   margin-right: 20px;
 }
 
+.hamburger {
+  display: none;
+  outline: none;
+}
+
 .profile-link,
 .cart-link {
   font-size: 14px;
@@ -702,5 +707,92 @@ form button {
 
 .bottom a:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  header {
+    height: 48px;
+    position: relative;
+  }
+  .top-menu {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .left-controls,
+  .profile-link,
+  #search-btn {
+    display: none;
+  }
+  .logo-and-nav-container img {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 120px;
+  }
+  .right-controls {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
+  .cart-controls {
+    margin-right: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: relative;
+  }
+  .cart-link > img {
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    -webkit-transform: translateX(calc(-100% - 6px));
+            transform: translateX(calc(-100% - 6px));
+    left: 0;
+  }
+  .cart-total {
+    margin-left: 0;
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hamburger {
+    display: inline-block;
+    padding: 0;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(calc(-50% + 3px));
+            transform: translateY(calc(-50% + 3px));
+  }
+  nav {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 48px;
+    padding: 6px 10px;
+    background-color: #ff48c1f7;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  nav.shown {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-link {
+    font-size: 20px;
+    padding: 6px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

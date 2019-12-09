@@ -1,5 +1,7 @@
 @import'base';
 
+$top-menu-height: 48px;
+
 header {
     height: 216px;
 }
@@ -18,6 +20,11 @@ header {
 
 .top-menu .dd:first-child {
     margin-right: 20px;
+}
+
+.hamburger {
+    display: none;
+    outline: none;
 }
 
 .profile-link,
@@ -591,3 +598,85 @@ form {
     }
 }
 
+@media (max-width: 900px) {
+    header{
+        height: $top-menu-height;
+        position: relative;
+    }
+
+    .top-menu {
+        flex-shrink: 0;
+    }
+
+    .left-controls,
+    .profile-link,
+    #search-btn {
+        display: none;
+    }
+
+    .logo-and-nav-container {
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+        }
+    }
+
+    .right-controls {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .cart-controls {
+        margin-right: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .cart-link > img {
+        height: 30px;
+        position: absolute;
+        top: 2px;
+        transform: translateX(calc(-100% - 6px));
+        left: 0;
+    }
+
+    .cart-total {
+        margin-left: 0;
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hamburger {
+        display: inline-block;
+        padding: 0;
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% + 3px));
+    }
+
+    nav {
+        width: auto;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: $top-menu-height;
+        padding: 6px 10px;
+        background-color: #ff48c1f7;
+        transform: translateX(-100%);
+        transition: all .4s ease;
+
+        &.shown {
+            transform: translateX(0);
+        }
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding: 6px 0;
+    }
+}

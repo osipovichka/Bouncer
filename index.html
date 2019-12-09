@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bouncer</title>
+    <link href="styles/hamburgers.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -13,6 +14,11 @@
     <header class="column-container">
         <div class="top-menu">
             <div class="container">
+                <button class="hamburger hamburger--vortex" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
                 <div class="left-controls">
                     <span class="dd">EN</span>
                     <span class="dd">USD</span>
@@ -29,7 +35,7 @@
                         </a>
                         <span class="cart-total">$0.00</span>
                     </div>
-                    <img src="./img/search-icon.svg">
+                    <button id="search-btn"><img src="./img/search-icon.svg"></button>
                 </div>
             </div>
         </div>
@@ -513,7 +519,10 @@
                 </div>
             </div>
         </div>
-    </div>>
+    </div>
+
+    <script src="site.js"></script>
+
 </body>
 
 </html>
